@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="D:\css code\bootstrap-4.6.1-dist\css\bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row  bg-primary "style='height:120px;font-size:60px;'><div class="col"style='padding-left:500px;color:white;'>ELECTRONIC PIANO</div></div>
+
+    <div class="container jsutify-content-center vw-100"style='margin-top:40px;padding-left:100px'>
+        <div class="row bg-dark " style='height:150px;margin-top:100px;width:967px'></div>
+        <div class="row " style='height:300px;'>
+            <div class="col1 " id='b1'style='border:3px solid black;width:100px;padding-top:250px;padding-left:10px;font-weight:bold' >A</div>
+            <div class="sm1 h-50" id='w1'style='width:45px;margin-left:-25px;background-color: black;color:white;padding-left:10px;padding-top:100px;font-weight: bold;' >P</div>
+            <div class="col2 " id='b2' style='border:3px solid black;width:100px;margin-left:-25px;padding-top:250px;padding-left:10px;font-weight:bold' >B</div>
+            <div class="sm1 h-50 "id='w2' style='width:45px;margin-left:-25px;background-color: black;padding-left:7px;padding-top:100px;font-weight: bold;color:white'>Q</div>
+            <div class="col1"id='b3' style='border:3px solid black;width:100px;margin-left:-25px;padding-top:250px;padding-left: 10px;font-weight:bold ;'>C</div>
+            <div class="col1 " id='b4'style='border:3px solid black;width:100px;padding-top:250px;padding-left: 10px;font-weight:bold ;'>D</div>
+            <div class="sm1 h-50 "id='w3' style='width:45px;margin-left:-25px;background-color: black;padding-left:10px;padding-top:100px;font-weight: bold;color:white'>R</div>
+            <div class="col1 " id='b5'style='border:3px solid black;width:100px;margin-left:-25px;padding-top:250px;padding-left: 10px;font-weight:bold ;'>E</div>
+            <div class="sm1 h-50 " id='w4'style='width:45px;margin-left:-25px;background-color: black;padding-left:10px;padding-top:100px;font-weight: bold;color:white'>S</div>
+            <div class="col1"id='b6' style='border:3px solid black;width:100px;margin-left:-25px;padding-top:250px;padding-left: 10px;font-weight:bold ;'>F</div>
+            <div class="sm1 h-50 " id='w5'style='width:45px;margin-left:-25px;background-color: black;padding-left:10px;padding-top:100px;font-weight: bold;color:white'>T</div>
+            <div class="col1 " id='b7'style='border:3px solid black;width:100px;margin-left:-25px;padding-top:250px;padding-left: 10px;font-weight:bold ;'>G</div>
+            <div class="col1" id='b8'style='border:3px solid black;width:100px;padding-top:250px;padding-left: 10px;font-weight:bold ;'>H</div>
+            <div class="sm1 h-50"id='w6' style='width:45px;margin-left:-25px;background-color: black;padding-left:10px;padding-top:100px;font-weight: bold;color:white'>U</div>
+            <div class="col1 "id='b9' style='border:3px solid black;width:100px;margin-left:-25px;padding-top:250px;padding-left: 10px;font-weight:bold ;'>I</div>
+            <div class="sm1 h-50 "id='w7' style='width:45px;margin-left:-25px;background-color: black;padding-left:10px;padding-top:100px;font-weight: bold;color:white'>V</div>
+            <div class="col1 "id='b10' style='border:3px solid black;width:100px;margin-left:-25px;padding-top:250px;padding-left: 10px;font-weight:bold ;'>J</div>
+            
+            <audio  id='key1' src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-G3.wav"></audio>
+            <audio  id='key2' src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C4.wav"></audio>
+            <audio  id='key3' src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-G4.wav"></audio>
+            <audio  id='key4'src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C5.wav"></audio>
+            <audio  id='key5' src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-G5.wav"></audio>
+            <audio id='key6' src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C6.wav"></audio>
+            <audio id='key7' src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-G6.wav"></audio>
+            
+
+
+        </div>
+       
+
+    </div>
+    <script>
+    window.addEventListener("keydown",function(event){
+            if(event.key=="a"){
+                let a =document.getElementById('key1');
+                a.play();
+                let b = document.getElementById('b1');
+                b.style.backgroundColor = 'black';
+                window.addEventListener("keyup",function(){
+                    let c= document.getElementById('b1');
+                    c.style.backgroundColor='transparent';
+
+                })
+            }
+            else if(event.key=='b'){
+                let d = document.getElementById("key2");
+                d.play();
+                let a = document.getElementById('b2');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b2');
+                    b.style.backgroundColor='transparent';
+                })
+            } 
+            else if(event.key=='c'){
+                let d = document.getElementById("key3");
+                d.play();
+                let a = document.getElementById('b3');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b3');
+                    b.style.backgroundColor='transparent';
+                })
+            }
+            else if(event.key=='d'){
+                let d = document.getElementById("key4");
+                d.play();
+                let a = document.getElementById('b4');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b4');
+                    b.style.backgroundColor='transparent';
+                })
+            }
+            else if(event.key=='e'){
+                let d = document.getElementById("key5");
+                d.play();
+                let a = document.getElementById('b5');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b5');
+                    b.style.backgroundColor='transparent';
+                })
+            }
+            else if(event.key=='f'){
+                let d = document.getElementById("key6");
+                d.play();
+                let a = document.getElementById('b6');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b6');
+                    b.style.backgroundColor='transparent';
+                })
+            }
+            else if(event.key=='g'){
+                let d = document.getElementById("key7");
+                d.play();
+                let a = document.getElementById('b7');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b7');
+                    b.style.backgroundColor='transparent';
+                })
+            }
+            else if(event.key=='h'){
+                let d = document.getElementById("key1");
+                d.play();
+                let a = document.getElementById('b8');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b8');
+                    b.style.backgroundColor='transparent';
+                })
+            }
+            else if(event.key=='i'){
+                let d = document.getElementById("key2");
+                d.play();
+                let a = document.getElementById('b9');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b9');
+                    b.style.backgroundColor='transparent';
+                })
+            }           else if(event.key=='j'){
+                let d = document.getElementById("key3");
+                d.play();
+                let a = document.getElementById('b10');
+                a.style.backgroundColor='black';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('b10');
+                    b.style.backgroundColor='transparent';
+                })
+            }  else if(event.key=='p'){
+                let d = document.getElementById("key1");
+                d.play();
+                let a = document.getElementById('w1');
+                a.style.backgroundColor='white';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('w1');
+                    b.style.backgroundColor='black';
+                })
+            }else if(event.key=='q'){
+                let d = document.getElementById("key2");
+                d.play();
+                let a = document.getElementById('w2');
+                a.style.backgroundColor='white';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('w2');
+                    b.style.backgroundColor='black';
+                })
+            }else if(event.key=='r'){
+                let d = document.getElementById("key3");
+                d.play();
+                let a = document.getElementById('w3');
+                a.style.backgroundColor='white';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('w3');
+                    b.style.backgroundColor='black';
+                })
+            }else if(event.key=='s'){
+                let d = document.getElementById("key4");
+                d.play();
+                let a = document.getElementById('w4');
+                a.style.backgroundColor='white';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('w4');
+                    b.style.backgroundColor='black';
+                })
+            }else if(event.key=='t'){
+                let d = document.getElementById("key5");
+                d.play();
+                let a = document.getElementById('w5');
+                a.style.backgroundColor='white';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('w5');
+                    b.style.backgroundColor='black';
+                })
+            }else if(event.key=='u'){
+                let d = document.getElementById("key6");
+                d.play();
+                let a = document.getElementById('w6');
+                a.style.backgroundColor='white';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('w6');
+                    b.style.backgroundColor='black';
+                })
+            }else if(event.key=='v'){
+                let d = document.getElementById("key7");
+                d.play();
+                let a = document.getElementById('w7');
+                a.style.backgroundColor='white';
+                window.addEventListener('keyup',function(){
+                    let b= document.getElementById('w7');
+                    b.style.backgroundColor='black';
+                })
+            }else{
+                alert('invalid key');
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+           
+    })
+        
+            
+       
+    </script>
+</body>
+</html>
